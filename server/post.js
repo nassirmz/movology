@@ -28,10 +28,9 @@ module.exports = function (req, res) {
       res.send('US citizen');
       break;
     case 'Puzzle':
-      console.log(req.query);
       var puzzle = new Buffer(req.query.puzzle, 'base64');
       var ans = eval(puzzle.toString());
-      res.send(ans + '');
+      res.send(Math.round(ans) + '');
       break;
     case 'Source':
       res.send('https://github.com/nassirmz/movology.git');
