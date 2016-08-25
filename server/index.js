@@ -10,5 +10,8 @@ var port = process.env.PORT || 3001;
 app.get('/', function (req, res) {
   res.sendStatus(200);
 });
+app.post('/', function (req, res) {
+  res.sendStatus(200);
+})
 
 app.listen(port);
