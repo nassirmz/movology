@@ -13,18 +13,6 @@ app.get('/', function (req, res) {
   res.sendStatus(200);
 });
 
-app.post('/', function (req, res) {
-  var query = querystring.unescape(req.query.q);
-  query = query.replace(/\'/g, "");
-  query = qs.parse(query);
-  console.log(query.q);
-  switch(Object.keys(query.q)[0]) {
-   case 'Name':
-    res.send('Nassir Zeinu');
-   default:
-    res.sendStatus(200);
-  }
-});
-
+app.post('/', require('./post'));
 
 app.listen(port);
