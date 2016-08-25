@@ -33,6 +33,12 @@ module.exports = function (req, res) {
       var ans = eval(puzzle.toString());
       res.send(ans + '');
       break;
+    case 'Source':
+      res.send('https://github.com/nassirmz/movology.git');
+      break;
+    case 'Resume':
+      res.send('https://drive.google.com/folderview?id=0B3MWzKqdceojcVAwVGhZR3I2b3M&usp=sharing');
+      break;
     default:
       res.sendStatus(200);
   }
