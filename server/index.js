@@ -1,8 +1,7 @@
 var express = require('express');
-var qs = require('qs');
-var querystring = require('querystring');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
+
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
